@@ -11,12 +11,13 @@ for(i=35; i>=8; i--) {
 }
 
 // Задание.2
-// let j = 89;
+let j = 89;
+document.write('Задание.2')
 
-// while (j>=11 ) {
-//     document.write('<br/>'+j);
-//     j--
-// }
+while (j>=11 ) {
+    document.write('<br/>'+j);
+    j--
+}
 
 // Задание.3
 let b;
@@ -60,7 +61,7 @@ let sum2;
 for(a=2;a<=10; a++){
     for(let j=2; j<=10; j++){
         if(a==2&&j==2){
-            document.write('Задание.6<br>')
+            document.write('<br>Задание.6<br>')
         }
             sum2=a*j
             document.write(a+'*'+j+'='+sum2+'<br>')
@@ -75,13 +76,12 @@ let n=1000;
 let num=0;
 
 for(n,num; n>50; num++){
-    if(n==1000) {
-        document.write('Задание.7<br>')
-    }
     n/=2
 }
+document.write('Задание.7<br>')
 document.write(n+'<br>');
 document.write(num+'<br>');
+
 
 //Задание.8
 let user = prompt("Введите число, для задания 8.");
@@ -102,9 +102,38 @@ document.write('Сумма чисел равна = '+sum5+'<br>')
 document.write('Среднее  арифметическое число = '+number)}
 
 //Задание.9
-// Завтра доделаю:3
+console.log('Задание.9')
+let str, x, largest, smallest;
+    str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 9';
+    x = 0;
+    largest = 0;
+    smallest = Infinity;
+for(let i = 0; i < str.length - 1; i++) {
+    if(str[i+1] == ' ') {
+        x = str[i];
+    }else {
+        x = str[i] + str[i+1];
+    }
+    if (x >= largest){
+        largest = x;
+    }
+}
+for(let i = 0; i < str.length - 1; i++) {
+    if(str[i+1] == ' ') {
+        x = str[i];
+    }else {
+        x = str[i] + str[i+1];
+    }
+    if (x <= smallest){
+        smallest = x;
+    }
+}
+console.log('Самое большое число в строке = '+largest)
+console.log('Самое маленькое число в строке= '+smallest)
 
 //Задание.10
+
+
 
 
 
