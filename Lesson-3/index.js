@@ -68,11 +68,12 @@ for(a=2;a<=10; a++){
     //Задание.7
     let n=1000;
     let num=0;
+    document.write('Задание.7<br>')
+    document.write('Вы ввели число = '+n+'<br>')
     
     for(n,num; n>50; num++){
         n/=2
     }
-    document.write('Задание.7<br>')
     document.write(n+'<br>');
     document.write(num+'<br>');
     
@@ -91,7 +92,7 @@ for(a=2;a<=10; a++){
     if(user==0||''){
         document.write('Вы ничего не ввели или же ввели 0.')
     }else{
-        document.write('Задание.8<br>')
+        document.write('Вы ввели число = '+user+'<br>')
         document.write('Сумма чисел равна = '+sum5+'<br>')
         document.write('Среднее  арифметическое число = '+number)}
         
@@ -100,47 +101,47 @@ for(a=2;a<=10; a++){
         let str, x, largest, smallest;
         str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 9';
         x = 0;
-        largest = 0;
-        smallest = Infinity;
-        for(let i = 0; i < str.length - 1; i++) {
-            if(str[i+1] == ' ') {
-                x = str[i];
-            }else {
-                x = str[i] + str[i+1];
+        largest = Number(str[0]);
+        smallest = Number(str[0]);
+        for(i = 0; i < str.length - 1; i++){
+            if(str[i] == ' ') continue;
+            if(str[i + 1] == ' '){
+                x = Number(str[i]);
             }
-            if (x >= largest){
+            else {
+                x = Number(str[i] + str[i + 1]);
+                i++;
+            }
+            if(x < smallest){
+                smallest = x;
+            }
+            if(x > largest){
                 largest = x;
             }
         }
-        for(let i = 0; i < str.length - 1; i++) {
-            if(str[i+1] == ' ') {
-        x = str[i];
-    }else {
-        x = str[i] + str[i+1];
-    }
-    if (x <= smallest){
-        smallest = x;
-    }
-}
+
 console.log('Самое большое число в строке = '+largest)
 console.log('Самое маленькое число в строке= '+smallest)
 
 //Задание.10
 document.write('<br>Задание.10<br>')
 
-let p = '963';
-let numb = 0;
-document.write('a. ')
-for(let i=0;i<p.length;i++){
-    document.write(Number(p[i])+ ' ')
-}  
-document.write('<br>'+'b. '+p.length+'<br>')
-for(let i=0;i<=p.length;i++){
-    numb = numb + Number(p[i])
-    if(Number(p[i])== Number(p.length)) {
-        document.write('c. '+numb+'<br>')
-    }   
-} 
+n = 124312;
+sum = 0;
+
+n = String(n);
+
+for(i=0;i<n.length;i++) {
+    if(i==0){
+        document.write('a. ')
+    }
+    document.write(n[i]+' ')
+    sum= sum + Number(n[i]);
+}
+
+document.write('<br> b. '+ n.length+'<br>')
+document.write('c. '+ sum)
+
 
 
 
